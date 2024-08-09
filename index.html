@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Estágio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Estágio</h1>
+        <form id="form">
+            <label for="start-date">Data de Início do Estágio:</label>
+            <input type="date" id="start-date" required>
+            <label for="end-date">Data de Fim do Estágio:</label>
+            <input type="date" id="end-date" required>
+            <label for="monthly-allowance">Valor da Bolsa Mensal (R$):</label>
+            <input type="number" id="monthly-allowance" required>
+            <label for="month-start">Data de Início do Mês:</label>
+            <input type="date" id="month-start" required>
+            <label for="month-end">Data de Fim do Mês:</label>
+            <input type="date" id="month-end" required>
+            <button type="button" onclick="calculate()">Calcular</button>
+        </form>
+        <div id="results" class="results">
+            <!-- Resultados serão exibidos aqui -->
+        </div>
+    </div>
+    <script src="./src/js/index.js"></script>
+</body>
+</html>
+
+
+
