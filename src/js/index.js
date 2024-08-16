@@ -15,8 +15,8 @@ function calculate() {
     // Calculate total number of days for internship
     const totalDays = Math.ceil((endDate - startDate) / (1000 * 60 * 60 * 24));
 
-    // Calculate vacation days (30 days per year)
-    const vacationDays = (totalDays * 30) / 365;
+    // Calculate vacation days (30 days per year) and round it to the nearest integer
+    const vacationDays = Math.round((totalDays * 30) / 365);
 
     // Calculate daily allowance
     const dailyAllowance = monthlyAllowance / 30;
@@ -37,12 +37,13 @@ function calculate() {
     resultsDiv.innerHTML = `
         <h2>Resultados</h2>
         <p>Total de dias estagiados: ${totalDays}</p>
-        <p>Quantidade de dias de férias: ${vacationDays.toFixed(2)}</p>
+        <p>Quantidade de dias de férias: ${vacationDays}</p>
         <p>Valor da bolsa por dia: R$ ${dailyAllowance.toFixed(2)}</p>
         <p>Valor de férias: R$ ${vacationAmount.toFixed(2)}</p>
-        <p>Pagamento pelo último mês: R$ ${lastMonthPayment.toFixed(2)}</p>
+        <p>Pagamento pelo último mês estagiado: R$ ${lastMonthPayment.toFixed(2)}</p>
     `;
 }
+
 
 
 
